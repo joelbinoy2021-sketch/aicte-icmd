@@ -3,6 +3,7 @@ FastAPI Full-Stack Backend for AICTE ICMD
 Persistent database storage, secure authentication, role-based access control (RBAC),
 tamper-evident audit trail, and cross-bureau overlap detection.
 """
+from database import init_db, get_connection, hash_password
 import os
 import time
 from datetime import datetime
