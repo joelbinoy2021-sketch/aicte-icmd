@@ -1,6 +1,13 @@
 [project]
 name = "aicte-icmd"
 version = "1.0.0"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn>=0.30.0",
+    "pydantic>=2.9.0",
+    "rapidfuzz>=3.9.0",
+    "python-multipart>=0.0.9",
+]
 
 [tool.vercel]
 entrypoint = "backend.main:app"
