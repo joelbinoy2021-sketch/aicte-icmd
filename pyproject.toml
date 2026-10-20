@@ -1,2 +1,3 @@
-[tool.vercel]
-entrypoint = "backend/main.py"
+[project]
+name = "aicte-icmd"
+version = "1.0.0"
