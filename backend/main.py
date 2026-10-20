@@ -1,20 +1,26 @@
+
 """
 FastAPI Full-Stack Backend for AICTE ICMD
 Persistent database storage, secure authentication, role-based access control (RBAC),
 tamper-evident audit trail, and cross-bureau overlap detection.
 """
-from database import init_db, get_connection, hash_password
 import os
+import sys
 import time
 from datetime import datetime
 from typing import Optional, List
+
+# Make the backend directory available for imports
+BACKEND_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, BACKEND_DIR)
+
+from database import init_db, get_connection, hash_password
 from fastapi import FastAPI, HTTPException, Header, Depends, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse, JSONResponse
 from pydantic import BaseModel
 
-from database import init_db, get_connection, hash_password
 
 app = FastAPI(
     title="AICTE ICMD Production Backend",
