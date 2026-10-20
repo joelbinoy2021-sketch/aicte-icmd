@@ -105,6 +105,7 @@ async function syncFromBackend() {
     render();
   } catch(err) {
     console.error("Backend sync error:", err);
+    render();
   }
 }
 
@@ -330,7 +331,7 @@ document.addEventListener("click", async e => {
     render();
     scrollTo(0,0);
     toast("Signed in as " + u.r);
-    }
+
   } else if(a==="go") {
     go(v);
   } else if(a==="theme"){
